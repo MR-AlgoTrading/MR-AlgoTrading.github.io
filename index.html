@@ -12,42 +12,39 @@
         }
 
         .container {
-            max-width: 600px;
+            max-width: 100%;
             margin: 0 auto;
-            text-align: center;
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         h1 {
-            margin-bottom: 20px;
             font-size: 24px;
             color: #00cf30;
+            text-align: center;
         }
 
         p {
-            margin-bottom: 10px;
-            text-align: justify;
             font-size: 16px;
+            text-align: justify;
         }
 
         .donation-info {
-            margin-top: 40px;
+            margin-top: 20px;
             font-size: 16px;
+            text-align: center;
         }
 
         .email-info {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             font-size: 16px;
+            text-align: center;
         }
 
         .button-container {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
+            flex-direction: column;
+            align-items: center;
             margin-top: 20px;
         }
 
@@ -60,33 +57,11 @@
             background-color: #00cf30;
             border-radius: 5px;
             transition: background-color 0.3s;
+            margin-bottom: 10px;
         }
 
-        .button:hover {
-            background-color: #009f25;
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 20px;
-            }
-
-            p {
-                font-size: 14px;
-            }
-
-            .donation-info,
-            .email-info {
-                font-size: 14px;
-            }
-
-            .button {
-                font-size: 16px;
-            }
+        .button:last-child {
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -103,9 +78,8 @@
         <div class="button-container">
             <a href="renko_reverse.html" class="button">RenkoReverse_AutoTrading</a>
             <a href="#" class="button">CandleSequence_AutoTrading (Em Construção)</a>
-</div>
-<p>Requisitos: ProfitChart Pro e Automação de Estratégias habilitado.</p>
-</div>
-
+        </div>
+        <p>Requisitos: ProfitChart Pro e Automação de Estratégias habilitado.</p>
+    </div>
 </body>
 </html>
