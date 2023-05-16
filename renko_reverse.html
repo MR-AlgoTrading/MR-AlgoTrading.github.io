@@ -94,13 +94,23 @@
             text-decoration: none;
             cursor: pointer;
         }
-                    .button-container {
+        .button:hover {
+            background-color: #009f25;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+
+            .button-container {
                 flex-direction: column;
             }
 
             .button {
                 margin-bottom: 10px;
             }
+        }
     </style>
 </head>
 <body>
