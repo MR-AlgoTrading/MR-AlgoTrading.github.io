@@ -53,47 +53,46 @@
         .back-button {
             margin-top: 20px;
         }
-        
-            .result-image {
-        max-width: 100px;
-    }
 
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0,0,0,0.8);
-    }
+        .result-image {
+            max-width: 100px;
+        }
 
-    .modal-content {
-        margin: 15% auto;
-        padding: 20px;
-        background-color: #fefefe;
-        border: 1px solid #888;
-        width: 80%;
-        max-width: 500px;
-    }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
 
-    .close-button {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-    }
+        .modal-content {
+            margin: 15% auto;
+            padding: 20px;
+            background-color: #fefefe;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
 
-    .close-button:hover,
-    .close-button:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-        
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -101,9 +100,7 @@
         <h1>Resultados de Estratégias de Negociação</h1>
 
         <h2>RenkoReverse_AutoTrading</h2>
-        <p>Algoritmo de trading para operações de compra e venda no mercado de Índice Futuro, utilizando 1 contrato. Com base em gráficos Renko de 4 renkos, identifica topos e fundos para entrar em operações visando um alvo de 2 para 1, com lucro de 210 pontos e prejuízo limitado a 110 pontos. Estratégia focada em reversões de tendência e movimentos de curto prazo. Resultados comprovados desde 04/05.
-
-</p>
+        <p>Algoritmo de trading para operações de compra e venda no mercado de Índice Futuro, utilizando 1 contrato. Com base em gráficos Renko de 4 renkos, identifica topos e fundos para entrar em operações visando um alvo de 2 para 1, com lucro de 210 pontos e prejuízo limitado a 110 pontos. Estratégia focada em reversões de tendência e movimentos de curto prazo. Resultados comprovados desde 04/05.</p>
         <table>
             <thead>
                 <tr>
@@ -112,32 +109,51 @@
                     <th>Lucro Bruto</th>
                     <th>Prejuízo Bruto</th>
                     <th>Fator de Lucro</th>
-                    <th>Operações</th>
-                    <th>Patrimônio</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>05/05/2023</td>
-                    <td>$5,00</td>
-                    <td>$357,00</td>
-                    <td>$352,00</td>
-                    <td>1.01</td>
-                    <td>25</td>
-                    <td><a href="#" onclick="openModal('RSImage/Screenshot_1.png')"><img class="result-image" src="RSImage/Screenshot_1.png" alt="Imagem"></a></td>
-                </tr>
-                <tr>
-                    <td>02/05/2023</td>
-                    <td>$9,750</td>
-                    <td>$3,000</td>
-                    <td>$1,500</td>
-                    <td>2</td>
-                    <td>60</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <button class="back-button" onclick="window.history.back()">Voltar</button>
+<th>Operações</th>
+<th>Patrimônio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>05/05/2023</td>
+<td>$5,00</td>
+<td>$357,00</td>
+<td>$352,00</td>
+<td>1.01</td>
+<td>25</td>
+<td><a href="#" onclick="openModal('RSImage/Screenshot_1.png')"><img class="result-image" src="RSImage/Screenshot_1.png" alt="Imagem"></a></td>
+</tr>
+<tr>
+<td>05/05/2023</td>
+<td>$5,00</td>
+<td>$357,00</td>
+<td>$352,00</td>
+<td>1.01</td>
+<td>25</td>
+<td><a href="#" onclick="openModal('RSImage/Screenshot_2.png')"><img class="result-image" src="RSImage/Screenshot_2.png" alt="Imagem"></a></td>
+</tr>
+</tbody>
+</table>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Resultado">
+        </div>
     </div>
+
+    <script>
+        function openModal(imageUrl) {
+            var modal = document.getElementById("myModal");
+            var modalImage = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImage.src = imageUrl;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+</div>
 </body>
 </html>
